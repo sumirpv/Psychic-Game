@@ -1,21 +1,18 @@
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var win = 0;
 var loss = 0;
-var guess = 4;
+var guess = 9;
 var userinput = [];
 
 
 var userLetter = document.getElementById("userchoice");
 
 //  press function is 
-for (var i = 6; i > 0; i--) {
+for (var i = 10; i > 0; i--) {
 
     document.onkeyup = function (event) {
 
-        //which key pressed
-        var userLetter = event.key;
-
-
+        
         //produce random letters
         var computerLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
         //comparin the letters
@@ -46,9 +43,8 @@ for (var i = 6; i > 0; i--) {
         guess--;
         console.log("guess" + guess);
         if (guess < 0) {
-            win = 0;
             loss = 0;
-            guess = 4;
+            guess = 9;
             userinput=[];
         }
 
